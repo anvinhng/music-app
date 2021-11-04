@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    margin: 0 0.2em 0 0.2em;
+    position: sticky;
+  }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0.2em;
+    padding: 0;
+    background-color: inherit;
+    font-family: 'Knewave', cursive;
+}
+
+.nav-bar{
+    display: flex;
+}
+
+#logo{
+    flex: 0 0 5em;
+    width: 10em;
+    height: 5em;
+    margin-left: 1em;
+}
+
+#back-forth{
+    align-self: center;
+    justify-content: center;
+    flex: 0 0 5em;
+    text-align: center;
+    margin-left: 1.5em;
+    color: white;
+    font-size: 1.5em;
+}
+
+#back-forth button:hover{
+    box-sizing: 1px solid rgb(151, 151, 151);
+    border-radius: 0.5em;
+}
+
+.search-container {
+    display:inline-block;
+    position:absolute;
+    left: 22em;
+    top: 1em;
+    margin: auto;
+}
+button{
+   color: white;
+   background-color: transparent;
+}
+input{
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    background-color: transparent;
+    border: 0 0 2px 0 solid rgb(160, 152, 152);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 1em;
+    height: 50px;    
+    font-family: 'Knewave', cursive;
+    letter-spacing: 2px;
+    padding-right:30px; 
+    width: 40em;
+    height: 100%;
+    text-transform: uppercase
+  }
+
+button {
+    background-color:transparent;
+    border:0;
+    opacity: 0.7
+}
+
+button:hover{
+    opacity: 1;
+}
+
+#btn-search {
+    position:absolute;
+    right:0;
+    top:0.2em;
+    color: white;
+    font-size: 1.5em;
+    opacity: 0.5;
+}
+
+#btn-search:hover{
+    opacity: 1;
+}
+
+
+.right-nav{
+    position: absolute;
+    right: 0;
+    top: 1.5em;
+    justify-self: right;
+    text-align: right;
+    align-self: right;
+}
+
+.right-nav i{
+    font-size: 1.5em;
+}
+

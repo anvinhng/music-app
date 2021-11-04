@@ -1,0 +1,80 @@
+span {
+    font-family: 'Knewave', cursive;
+}
+
+#sidenav{
+    position: sticky;
+}
+
+#sidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -100px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    padding-left: 5px;
+    width: 158px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #sidenav a:hover {
+    left: -2px; /* On mouse-over, make the elements appear as they should */
+  }
+
+  #sidenav span{
+    background-color: transparent;
+    /* display: none; */
+    color: white;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  /* #sidenav a:hover span {
+    display: block;
+    text-align: center;
+} */
+
+/* 
+#sidenav a:hover i {
+    display: none;
+}
+   */
+  #sidenav i{
+      background-color: transparent;
+      font-size: 1.5em;
+      margin-top:auto;
+  }
+
+  #chart i{
+      margin-right: 0.1em;
+  }
+
+
+  #home {
+    top: 50px;
+    background-color: black;
+    border: 1px solid #993095;
+  }
+  
+  #category {
+    top: 110px;
+    background-color: black; 
+    border: 1px solid #FF66C4;
+  }
+  
+  #favorite {
+    top: 170px;
+    background-color: black; 
+    border: 1px solid #f44336;
+  }
+  
+  #chart {
+    top: 230px;
+    background-color: black; 
+    border: 1px solid #00F2EA;
+  }

@@ -1,0 +1,168 @@
+#player {
+  background: inherit;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.heart {
+  position: absolute;
+  right: 0;
+  color: #ffffff;
+  margin: 10px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.clicked {
+  color: #49654d;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.info {
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-transform: translateY(35px);
+          transform: translateY(35px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.up {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.progress-bar {
+  height: 5px;
+  width: 70%;
+  margin: 0em;
+  padding-bottom: 0.2em;
+  background: #ac36a8;
+  border-radius: 10px;
+  font-family: "Knewave", cursive;
+}
+
+.time--current,
+.time--total {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  margin-top: -2px;
+  background-color: none;
+}
+
+.time--current {
+  left: 15px;
+  bottom: 50px;
+}
+
+.time--total {
+  right: 15px;
+  bottom: 50px;
+}
+
+.currently-playing {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.song-name,
+.artist-name {
+  font-family: "Knewave", cursive;
+  text-transform: uppercase;
+  margin: 0em;
+  background-color: black;
+}
+
+.song-name {
+  font-size: 0.8em;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.artist-name {
+  font-size: 0.6em;
+  letter-spacing: 1.5px;
+  color: white;
+  margin-top: 5px;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #8ba989;
+}
+
+.controls .play,
+.controls .pause {
+  margin: 15px 25px;
+  color: #6e946c;
+  position: absolute;
+  text-align: center;
+}
+
+.controls .option {
+  left: 10px;
+  position: absolute;
+  font-size: 0.8em;
+}
+
+.controls .add {
+  right: 10px;
+  position: absolute;
+  font-size: 0.8em;
+}
+
+.controls .heart {
+  margin-right: 30px;
+  font-size: 0.8em;
+}
+
+.controls .shuffle {
+  margin-left: 30px;
+  font-size: 0.8em;
+}
+
+.play,
+.pause,
+.next,
+.previous,
+.option,
+.add,
+.volume,
+.shuffle,
+.heart {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.play:hover,
+.pause:hover,
+.next:hover,
+.previous:hover,
+.option:hover,
+.add:hover,
+.volume:hover,
+.shuffle:hover,
+.heart:hover {
+  color: #557c5f;
+}
+/*# sourceMappingURL=music-player.component.css.map */
