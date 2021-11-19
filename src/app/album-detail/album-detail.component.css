@@ -1,0 +1,66 @@
+#albumDetail{
+    margin-top: 2em;
+    margin-left: 3em;
+}
+
+.btn{
+    position: absolute;
+    transform: translateY(-10px);
+}
+
+.album-img{
+    width: 15em;
+    height: auto;
+}
+
+header{
+    margin-bottom: 2em;
+    font-family: 'Knewave', cursive;
+    font-style: italic;
+    margin-left: 2em;
+}
+
+header h4, header h2{
+    font-family: 'Knewave', cursive;
+    font-style: italic;
+}
+
+.album-info{
+    margin-left: 2em;
+    margin-top: 3em;
+}
+
+.album-title{
+    font-size: 3em;
+    background: linear-gradient(
+    to right, 
+    rgb(153,48,149), 
+    rgb(255,102,196),
+    rgb(0,242,234)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.3em;
+}
+
+.album-artist{
+    font-size: 1.5em;
+    color:rgb(153,48,149);
+  padding-bottom: 0.3em;
+}
+
+.album-genre{
+    color:  rgb(153,48,149)
+}
+
+table{
+    width: 60em;
+    font-family: 'Knewave', cursive;
+}
+
+
+
+
+
+/* purple rgb(153,48,149) */
+/* pink rgb(255,102,196) */

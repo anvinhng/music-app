@@ -1,0 +1,82 @@
+
+<div class="container">
+  <div class="category-title kpop-title">
+    <div class="lines"></div>
+    <h1>
+      <span>KPOP</span>
+      <span>KPOP</span>
+    </h1>
+    <h2 class="slogan">Music in you</h2>
+  </div>
+
+ 
+
+  <div class="row music-display">
+    <div  *ngFor="let kpop of kpopList; let i = index" >
+        <div class="card" style="width: 16rem;">
+            <img (click)="openSong(kpop.url)" class="card-img-top" [src]="kpop.img" alt="Card image cap">
+            <div class="card-body">
+                <div class="row title">
+                    <h4 (click)="openSong(kpop.url)" class="card-title">{{kpop.title}}</h4>
+                    <span (click)="hideme[i] = !hideme[i]" class="favoriteUnclick btn"><i class="far fa-heart"></i></span>
+                    <span (click)="hideme[i] = !hideme[i]" [hidden]="!hideme[i]" class="favoriteClicked btn"><i class="fas fa-heart"></i></span>               
+                </div>
+                <p class="card-text">{{kpop.artist}}</p>
+            </div>
+          </div>
+    </div>
+  </div>  
+
+  <div class="category-title vpop-title">
+    <div class="lines"></div>
+    <h1>
+      <span>VPOP</span>
+      <span>VPOP</span>
+    </h1>
+    <h2 class="slogan">Feel the meaning</h2>
+  </div>
+
+  <div class="row music-display">
+    <div  *ngFor="let vpop of vpopList; let i = index" >
+        <div class="card" style="width: 16rem;">
+            <img (click)="openSong(vpop.url)" class="card-img-top" [src]="vpop.img" alt="Card image cap">
+            <div class="card-body">
+                <div class="row title">
+                    <h4 (click)="openSong(vpop.url)" class="card-title">{{vpop.title}}</h4>
+                    <span (click)="hideme[i] = !hideme[i]" class="favoriteUnclick btn"><i class="far fa-heart"></i></span>
+                    <span (click)="hideme[i] = !hideme[i]" [hidden]="!hideme[i]" class="favoriteClicked btn"><i class="fas fa-heart"></i></span>               
+                </div>
+                <p class="card-text">{{vpop.artist}}</p>
+            </div>
+          </div>
+    </div>
+  </div> 
+
+  
+  <div class="category-title usuk-title">
+    <div class="lines"></div>
+    <h1>
+      <span>USUK</span>
+      <span>USUK</span>
+    </h1>
+    <h2 class="slogan">Get heated up</h2>
+  </div>
+
+  <div class="row music-display">
+    <div  *ngFor="let usuk of usukList; let i = index" >
+        <div class="card" style="width: 16rem;">
+            <img (click)="openSong(usuk.url)" class="card-img-top" [src]="usuk.img" alt="Card image cap">
+            <div class="card-body">
+                <div class="row title">
+                    <h4 (click)="openSong(usuk.url)" class="card-title">{{usuk.title}}</h4>
+                    <span (click)="hideme[i] = !hideme[i]" class="favoriteUnclick btn"><i class="far fa-heart"></i></span>
+                    <span (click)="hideme[i] = !hideme[i]" [hidden]="!hideme[i]" class="favoriteClicked btn"><i class="fas fa-heart"></i></span>               
+                </div>
+                <p class="card-text">{{usuk.artist}}</p>
+            </div>
+          </div>
+    </div>
+  </div> 
+
+
+</div>

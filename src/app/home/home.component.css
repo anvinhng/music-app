@@ -1,0 +1,66 @@
+*{
+    background-color: black;
+    color:white;
+
+}
+
+.banner{
+    width: 70vw;
+}
+
+h1, .card{
+    font-family: 'Knewave', cursive;
+}
+
+.card{
+    margin-bottom: 1em;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-img-top, .title{
+    width: 14em;
+}
+
+.card-title{
+    width: 10em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.btn{
+    position: absolute;
+    background-color: transparent;
+    right: 3.5em;
+    top: 12.6em;
+    opacity: 0.5em
+}
+
+.favoriteUnclick{
+    opacity: 0.5;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.fa-heart{
+    background-color: inherit;
+}
+
+.fas{
+    color:rgb(235, 47, 109);
+    opacity: 1;
+}
+
+.title{
+    margin-left : 0;
+}
+
+.card-body{
+    padding: 0;
+    padding-top: 1em;
+}

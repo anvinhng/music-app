@@ -9,10 +9,12 @@
 
         <div class='search-container'>
           <form>
-            <input type="text" placeholder="Search for song, artist, album..." name=''>
+            <input type="text" [(ngModel)]="searchStr" placeholder="Search for song, artist, album..." name='searchStr' class="form-control">
             <button type="submit" class="button" id="btn-search"><i class="fas fa-search"></i></button>
-          </form>     
+          </form>  
         </div>
+
+        
         
         <div class="row right-nav float-right">
           <!-- <button><i class="fas fa-heart"></i></button> -->

@@ -1,0 +1,17 @@
+<a href="/album-detail"><img class="banner" src="../../assets/images/banner.jpg"></a>
+<h1>New Songs</h1>
+    <div class="row">
+        <div  *ngFor="let song of newSongs; let i = index" >
+            <div class="card" style="width: 16rem;">
+                <img (click)="openSong(song.url)" class="card-img-top" [src]="song.img" alt="Card image cap">
+                <div class="card-body">
+                    <div class="row title">
+                        <h4 (click)="openSong(song.url)" class="card-title">{{song.title}}</h4>
+                        <span (click)="hideme[i] = !hideme[i]; addFavorite(song.url)" [hidden]="hideme[i]" class="favoriteUnclick btn"><i class="far fa-heart"></i></span>
+                        <span (click)="hideme[i] = !hideme[i]; removeFavorite(song.url)" [hidden]="!hideme[i]" class="favoriteClicked btn"><i class="fas fa-heart"></i></span>               
+                    </div>
+                    <p class="card-text">{{song.artist}}</p>
+                </div>
+              </div>
+        </div>
+    </div>  

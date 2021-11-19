@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap");
+* {
+  background-color: transparent !important;
+}
+
+.container {
+  min-height: 100vh;
+  margin-top: 3em;
+}
+
+.lines {
+  position: absolute;
+  width: 100vw;
+  height: 3.5em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(89, 193, 254, 0.2)), color-stop(40%, #59c1fe), color-stop(60%, #59c1fe), color-stop(80%, rgba(89, 193, 254, 0.2)));
+  background: linear-gradient(rgba(89, 193, 254, 0.2) 20%, #59c1fe 40%, #59c1fe 60%, rgba(89, 193, 254, 0.2) 80%);
+  background-size: 1px 0.5em;
+  -webkit-box-shadow: 0 0 1em rgba(89, 193, 254, 0.4);
+          box-shadow: 0 0 1em rgba(89, 193, 254, 0.4);
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+  left: 0;
+}
+
+h1 {
+  position: relative;
+  font-family: 'Exo';
+  font-size: 7em;
+  margin: 0;
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+  letter-spacing: 0.03em;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  top: -0.1em;
+  right: 0.05em;
+  width: 0.4em;
+  height: 0.4em;
+  background: radial-gradient(white 3%, rgba(255, 255, 255, 0.3) 15%, rgba(255, 255, 255, 0.05) 60%, transparent 80%), radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/5% 100%, radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/70% 5%;
+  background-repeat: no-repeat;
+}
+
+h1 span:first-child {
+  display: block;
+  text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 5em #165ff3;
+  -webkit-text-stroke: 0.06em rgba(0, 0, 0, 0.5);
+}
+
+h1 span:last-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #032d50), color-stop(35%, #00a1ef), color-stop(50%, white), color-stop(50%, #20125f), color-stop(55%, #8313e7), color-stop(75%, #ff61af));
+  background-image: linear-gradient(#032d50 25%, #00a1ef 35%, white 50%, #20125f 50%, #8313e7 55%, #ff61af 75%);
+  -webkit-text-stroke: 0.01em #94a0b9;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slogan {
+  font-family: 'Mr Dafoe';
+  margin: 0;
+  font-size: 3.5em;
+  margin-top: -1em;
+  margin-left: 0.5em;
+  color: white;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  background-color: none;
+}
+
+.music-display {
+  margin-top: 6em;
+}
+
+.card {
+  font-family: 'Knewave', cursive;
+  margin-bottom: 1em;
+}
+
+.card-title:hover .card-img-top:hover {
+  cursor: pointer;
+}
+
+.card-img-top, .title {
+  width: 14em;
+}
+
+.card-title {
+  width: 10em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-style: bold;
+  font-size: 1.3em;
+}
+
+.btn {
+  position: absolute;
+  background-color: transparent;
+  right: 3.5em;
+  top: 12.6em;
+}
+
+.favoriteUnclick {
+  opacity: 0.5;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa-heart {
+  background-color: inherit;
+}
+
+.far {
+  color: white;
+}
+
+.fas {
+  color: #eb2f6d;
+  opacity: 1;
+}
+
+.title {
+  margin-left: 0;
+}
+
+.card-body {
+  padding: 0;
+  padding-top: 1em;
+}
+
+.vpop-title {
+  margin-top: 4em;
+}
+
+.usuk-title {
+  margin-top: 4em;
+}
+/*# sourceMappingURL=category.component.css.map */

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="category-title title">
+        <div class="lines"></div>
+        <h1>
+        <span>Favorite Song</span>
+        <span>Favorite Song</span>
+        </h1>
+        <h2 class="slogan">Your Taste Your Happiness</h2>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <thead class="thead thead-light">
+                <tr>
+                    <th width="5px" scope="col">Rank</th>
+                    <th scope="col">Track</th>
+                    <th scope="col">Artist</th>
+                    <th scope="col"></th>
+                </tr>      
+            </thead>
+            <tbody>
+                <tr *ngFor="let song of favSongList; let i = index"> 
+                    <th class="rankNo" scope="row">{{i+1}}</th>
+                    <td (click)="openSong(song.url)">{{song.title}}</td>
+                    <td (click)="openSong(song.url)">{{song.artist}}</td>
+                    <td class="heart"> 
+                        <span (click)="hideme[i] = !hideme[i]; removeFavorite(song.url)" [hidden]="hideme[i]" class="favoriteClicked btn">Remove</span> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
