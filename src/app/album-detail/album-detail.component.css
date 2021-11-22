@@ -58,6 +58,10 @@ table{
     font-family: 'Knewave', cursive;
 }
 
+.song-title:hover{
+    cursor: pointer;
+}
+
 
 
 

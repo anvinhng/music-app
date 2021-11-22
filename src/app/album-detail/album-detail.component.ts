@@ -11,7 +11,7 @@ import { Song } from './../interface/music-list';
 export class AlbumDetailComponent implements OnInit {
   songList: any[] = data;
   albumString: string = "Formula Of Love";
-  albumList: Song[] = data.filter(song => song.album.toLowerCase() == this.albumString.toLowerCase());
+  albumList: any[] = data.filter(song => song.album.toLowerCase() == this.albumString.toLowerCase());
   albumTitle = this.albumList[0].album;
   albumArtist = this.albumList[0].artist;
   albumImg = this.albumList[0].img;
@@ -19,18 +19,15 @@ export class AlbumDetailComponent implements OnInit {
 
   hideme: any = [];
 
-  kpopList: Array<any> = data.filter(x => x.genre == "kpop").slice(0,8);
-  vpopList: Array<any> = data.filter(x => x.genre == "vpop").slice(0,8);
-  usukList: Array<any> = data.filter(x => x.genre == "usuk").slice(0,8);
-
   constructor(private musicService: MusicService) { }
 
   ngOnInit(): void {
   }
 
   openSong(url: string){
-    let cSong = this.songList.find(x => x.url == url);
+    let cSong = this.albumList.find(x => x.url == url);
     this.musicService.fetchSong(cSong);
+    this.musicService.receiveCurrentPlaylist(this.albumList);
   }
 
 }

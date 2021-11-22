@@ -16,6 +16,7 @@ export class CategoryComponent implements OnInit {
   kpopList: Array<any> = data.filter(x => x.genre == "kpop").slice(0,8);
   vpopList: Array<any> = data.filter(x => x.genre == "vpop").slice(0,8);
   usukList: Array<any> = data.filter(x => x.genre == "usuk").slice(0,8);
+  songInCategoryOrder = this.kpopList.concat(this.vpopList, this.usukList);
 
   constructor(private musicService: MusicService) { }
 
@@ -25,6 +26,7 @@ export class CategoryComponent implements OnInit {
   openSong(url: string){
     let cSong = this.songList.find(x => x.url == url);
     this.musicService.fetchSong(cSong);
+    this.musicService.receiveCurrentPlaylist(this.songInCategoryOrder);
   }
 
 }

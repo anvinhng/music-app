@@ -6,6 +6,7 @@ import { ChartComponent } from './chart/chart.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { HomeComponent } from './home/home.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent} ,
@@ -13,12 +14,13 @@ const routes: Routes = [
   {path:'favorite', component: FavoriteComponent},
   {path:'chart', component: ChartComponent},
   {path:'album-detail', component: AlbumDetailComponent},
+  {path: 'search-result', component: SearchResultComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, CategoryComponent, FavoriteComponent, ChartComponent, AlbumDetailComponent, PageNotFoundComponent]
+export const routingComponents = [HomeComponent, CategoryComponent, FavoriteComponent, ChartComponent, AlbumDetailComponent, SearchResultComponent, PageNotFoundComponent]

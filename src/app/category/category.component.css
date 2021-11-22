@@ -144,4 +144,8 @@ h1 span:last-child {
 .usuk-title {
   margin-top: 4em;
 }
+
+.card-title:hover, .card-img-top:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=category.component.css.map */

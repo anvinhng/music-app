@@ -21,7 +21,7 @@
                 <tbody>
                     <tr *ngFor="let song of albumList; let i = index"> 
                         <th scope="row">{{i+1}}</th>
-                        <td (click)="openSong(song.url)">{{song.title}}</td>
+                        <td class="song-title" (click)="openSong(song.url)">{{song.title}}</td>
                         <td (click)="openSong(song.url)">{{song.artist}}</td>
                         <td class="heart"> <span (click)="hideme[i] = !hideme[i]" class="favoriteUnclick btn"><i class="far fa-heart"></i></span>
                             <span (click)="hideme[i] = !hideme[i]" [hidden]="!hideme[i]" class="favoriteClicked btn"><i class="fas fa-heart"></i></span> </td>

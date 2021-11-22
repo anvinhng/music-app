@@ -5,6 +5,7 @@
   min-height: 100vh;
   height: 100%;
   margin-top: 3em;
+  max-width: 100%;
 }
 
 .lines {
@@ -17,6 +18,7 @@
   box-shadow: 0 0 1em rgba($color, 0.4);
   transform: translateY(-1em);
   left: 0;
+  overflow: hidden;
 }
 
 h1 {
@@ -114,6 +116,7 @@ table{
     margin-top: 6em;
     color: white;
     width: 70em;
+    max-width: 100%;
 }
 
 thead{
@@ -129,4 +132,8 @@ tr:nth-child(even) {
     font-family: 'Knewave', cursive;
     text-align: center;
     font-size: 1.5em;
+}
+
+.song-title:hover, .song-artist:hover{
+  cursor: pointer;
 }

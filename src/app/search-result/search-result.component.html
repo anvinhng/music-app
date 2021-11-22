@@ -1,7 +1,6 @@
-<a href="/album-detail"><img class="banner" src="../../assets/images/banner.png"></a>
-<h1 class="main-title">Explore New Music</h1>
+<h1 class="main-title">Search Result</h1>
     <div class="row">
-        <div  *ngFor="let song of newSongs; let i = index" >
+        <div  *ngFor="let song of searchList; let i = index" >
             <div class="card" style="width: 16rem;">
                 <img (click)="openSong(song.url)" class="card-img-top" [src]="song.img" alt="Card image cap">
                 <div class="card-body">
@@ -14,4 +13,4 @@
                 </div>
               </div>
         </div>
-    </div>  
+    </div> 

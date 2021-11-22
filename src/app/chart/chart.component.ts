@@ -23,6 +23,7 @@ hideme: any = [];
   openSong(url: string){
     let cSong = this.songList.find(x => x.url == url);
     this.musicService.fetchSong(cSong);
+    this.musicService.receiveCurrentPlaylist(this.rankingList);
   }
 
 

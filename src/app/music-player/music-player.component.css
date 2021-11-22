@@ -142,8 +142,9 @@
   margin-right: 5em;
 }
 
-.volumn {
-  margin-right: 3em;
+.volume {
+  margin-right: 2em;
+  min-width: 1.5em;
 }
 
 .volumn-bar {
@@ -152,7 +153,7 @@
           flex: 0 0 20%;
   -ms-grid-column-align: right;
       justify-self: right;
-  margin-top: 1.5em;
+  margin-top: 1.8em;
 }
 
 .volumn-bar .progress-bar {
@@ -181,5 +182,11 @@
 .heart:hover {
   color: #40fff9;
   opacity: 1;
+}
+
+.progress {
+  width: 105vw;
+  margin-left: -1em;
+  overflow: hidden;
 }
 /*# sourceMappingURL=music-player.component.css.map */

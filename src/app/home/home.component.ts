@@ -25,18 +25,26 @@ export class HomeComponent implements OnInit {
   openSong(url: string){
     let cSong = this.newSongs.find(x => x.url == url);
     this.musicService.fetchSong(cSong);
+    this.musicService.receiveCurrentPlaylist(this.newSongs);
   }
 
   addFavorite(url: any) {
-    let songAdd = this.newSongs.find(x=>x.url = url)
+    let songAdd = this.newSongs.find(x=>x.url == url)
     this.musicService.addFavSong(songAdd);
-    alert("You add a Song to Favorite!")
+    alert("You add a Song to Favorite!");
   }
 
   removeFavorite(url: any){
-    let songRemove = this.newSongs.find(x=>x.url = url)
-    this.musicService.addFavSong(songRemove);
+    this.musicService.removeFavSong(url);
     alert("You remove a Song from Favorite!")
+  }
+
+  addLocalStorage(status: string){
+    localStorage.setItem("liked", status);
+  }
+
+  getLocalStorage(){
+    localStorage.getItem("liked");
   }
 
 }

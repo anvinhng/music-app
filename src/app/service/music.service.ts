@@ -12,9 +12,6 @@ import { Song } from 'src/app/interface/music-list';
   providedIn: 'root'
 })
 export class MusicService {
-  // ITUNES_API = 'https://itunes.apple.com/';
-  // iTunesUrl = 'https://itunes.apple.com/search';
-  // musicList!: Observable<Song[]>;
   curAudio = new Audio;
   constructor() {
     
@@ -51,38 +48,38 @@ export class MusicService {
     currentTime: string = '00:00';
     seek = 0;
 
-    openFile(){
-      this.currentSong = this.songReceive();
-      this.curAudio.pause();
-      this.isPlay = false;
-  
-    }
+    // openFile(){
+    //   this.currentSong = this.songReceive();
+    //   this.curAudio.pause();
+    //   this.isPlay = false;
+    // }
 
     fetchSong(audio: Song){
       this.currentSong.title = audio.title;
       this.currentSong.artist = audio.artist;
       this.currentSong.url = audio.url;
       this.currentSong.img = audio.img;
-      this.curAudio.src = audio.url;
+      this.curAudio.src = this.currentSong.url;
       console.log(this.currentSong);
       this.streamObserve(this.curAudio.src).subscribe(event => {});
       this.isPlay = true;
-      // this.musicPlayer.isPlay = this.isPlay;
+      localStorage.setItem('currentSong', JSON.stringify(this.currentSong));
     }
 
-    songReceive(){
-      return this.currentSong;
-    }
+    // songReceive(){
+    //   let s=localStorage.getItem('currentSong')
+    //   if (s){
+    //   return this.currentSong = JSON.parse(s);
+    //   }
+    // }
 
     streamObserve(url: string){
-      console.log("at stream Observe")
       return new Observable(observer => {
   
         this.curAudio.src = url;
         this.curAudio.load();
         this.curAudio.play();
         
-  
         const handler = (event: Event) =>{
           this.seek = this.curAudio.currentTime;
           this.duration = this.timeFormat(this.curAudio.duration);
@@ -99,6 +96,7 @@ export class MusicService {
         }
       })
     }
+
   
     addEvent(object: any, events: any, handler: any){
       events.forEach((event: any) => {
@@ -125,6 +123,14 @@ export class MusicService {
       return moment.utc(momentTime).format(format);
     }
 
+    ngDoCheck(){
+      let s = localStorage.getItem("currentSong");
+      if (s){
+        this.currentSong = JSON.parse(s);
+      };
+      this.curAudio.src = this.currentSong.url;
+    }
+
     //Add Favorite Service
     song: any[] = [];
     favSongList : any[] = [];
@@ -142,15 +148,32 @@ export class MusicService {
       return this.favSongList;
     }
 
-    removeFavSong(songRemove:any){
+    removeFavSong(url: any){
       let s = localStorage.getItem("favorite");
       if (s) {
         this.favSongList = JSON.parse(s);
-      } 
-      this.song = this.favSongList.filter(x => x!=songRemove);
-      localStorage.setItem("favorite", JSON.stringify(this.song));
+      } else {
+        this.favSongList = [];
+      }
+      let index = this.favSongList.findIndex(item => item.url == url);
+      console.log(index);
+      if (index > -1) {
+      this.favSongList.splice(index, 1);
+      }
+      localStorage.setItem("favorite", JSON.stringify(this.favSongList));
+      this.getFavSong();
     }
 
+
+    //currentPlayList
+    currentPlaylist: any = [];
+    receiveCurrentPlaylist(list: any){
+      this.currentPlaylist = list;
+    }
+
+    sendCurrentPlaylist(){
+      return this.currentPlaylist;
+    }
 
 }
   

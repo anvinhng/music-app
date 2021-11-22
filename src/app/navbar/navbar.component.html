@@ -1,18 +1,30 @@
 <header>
     <nav>
       <div class="row nav-bar">
-        <img src="../../assets/images/logo-black.png" id="logo">
+        <a href=""><img src="../../assets/images/logo-black.png" id="logo"></a>
         <div id="back-forth">
-          <button><i class="fas fa-arrow-left"></i></button>
+          <button (click)="back()"><i class="fas fa-arrow-left"></i></button>
           <button><i class="fas fa-arrow-right"></i></button>
         </div>
 
         <div class='search-container'>
           <form>
-            <input type="text" [(ngModel)]="searchStr" placeholder="Search for song, artist, album..." name='searchStr' class="form-control">
-            <button type="submit" class="button" id="btn-search"><i class="fas fa-search"></i></button>
+            <input (keyup)="returnSearch()" type="text" [(ngModel)]="searchStr" 
+                    placeholder="Search for artist, song, album..." 
+                    name='searchStr' class="form-control" 
+                    onmouseover="focus();old = value;" 
+                    onmousedown = "value = '';" 
+                    onmouseup="value = old;">
+            <button (click)="sendSearchString(searchStr)" routerLink="/search-result" type="submit" class="button" id="btn-search"><i class="fas fa-search"></i></button>
+            <datalist routerLink="/search-result" [hidden]="!searchStr" id="filteredArray">
+              <option routerLink="/search-result" *ngFor="let item of displayItems" (click)="sendSearchString(item)">{{item}}</option>
+            </datalist>
           </form>  
+          
+          <!-- <input  type="text" name="empname" list="filteredArray" [(ngModel)]="inputValue"/> -->
+
         </div>
+
 
         
         

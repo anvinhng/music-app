@@ -1,7 +1,9 @@
+
 *{
     box-sizing: border-box;
     margin: 0 0.2em 0 0.2em;
     position: sticky;
+    z-index: 100;
   }
 body{
     display: flex;
@@ -113,4 +115,22 @@ input:active #btn-search{
 .right-nav i{
     font-size: 1.5em;
 }
+/* 
+.search-container{
+    overflow: visible;
+} */
 
+datalist{
+    background-color: black;
+    /* overflow: visible; */
+    display: block;
+    z-index: 99;
+    position: relative;
+}
+
+option{
+    background-color:black;
+    color: white;
+    cursor: pointer;
+    z-index: 99;
+}

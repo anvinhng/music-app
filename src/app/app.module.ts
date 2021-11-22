@@ -20,6 +20,7 @@ import { AudioContextModule } from 'angular-audio-context';
 import { CommonModule } from '@angular/common';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ChartComponent,
     HomeComponent,
     AlbumDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

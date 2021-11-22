@@ -139,15 +139,16 @@ $font: 'Knewave', cursive;
     margin-right: 5em;
   }
 
-  .volumn{
-    margin-right: 3em;
+  .volume{
+    margin-right: 2em;
+    min-width: 1.5em;
   }
 
 
 .volumn-bar{
   flex: 0 0 20%;
   justify-self: right;
-  margin-top: 1.5em;
+  margin-top: 1.8em;
 }
 
 .volumn-bar .progress-bar{
@@ -172,3 +173,8 @@ $font: 'Knewave', cursive;
   }
 }
 
+.progress{
+  width: 105vw;
+  margin-left: -1em;
+  overflow: hidden;
+}

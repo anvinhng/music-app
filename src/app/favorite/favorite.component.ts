@@ -21,19 +21,22 @@ export class FavoriteComponent implements OnInit {
     this.favSongList = this.musicService.getFavSong();
   }
 
-  ngOnCheck(){
+  ngDoCheck(){
     this.favSongList = this.musicService.getFavSong();
   }
 
   openSong(url: string){
     let cSong = this.favSongList.find(x => x.url == url);
     this.musicService.fetchSong(cSong);
+    this.musicService.receiveCurrentPlaylist(this.favSongList);
   }
 
   removeFavorite(url: any){
-    let songRemove = this.songList.find(x=>x.url == url);
-    this.musicService.removeFavSong(songRemove);
-    alert("You remove a Song from Favorite!")
+    // let songRemove = this.favSongList.find(x=>x.url == url);
+    this.musicService.removeFavSong(url);
   }
 
+  removeAll(){
+    localStorage.removeItem("favorite");
+  }
 }
